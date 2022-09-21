@@ -124,6 +124,52 @@
     box-shadow: var(--box-shadow);
 }
 
+/* Main Table (Top Left Corner) */
+#main-table tr:first-child td:first-child {
+    /* Colors */
+    background-color: var(--dark-cyan);
+
+    /* Borders */
+    border-top-left-radius: var(--border-radius);
+}
+
+/* Main Table (Top Right Corner) */
+#main-table tr:first-child td:last-child {
+    /* Borders */
+    border-top-right-radius: var(--border-radius);
+}
+
+/* Main Table (Bottom Left Corner) */
+#main-table tr:last-child td:first-child {
+    /* Borders */
+    border-bottom-left-radius: var(--border-radius);
+}
+
+/* Main Table (Bottom Right Corner) */
+#main-table tr:last-child td:last-child {
+    /* Borders */
+    border-bottom-right-radius: var(--border-radius);
+}
+
+/* Main Table (Top Row and Left Column) */
+#main-table tr:first-child td:not(:first-child),
+#main-table td:first-child {
+    /* Colors */
+    background-color: var(--cyan);
+}
+
+/* Main Table (Even Rows) */
+#main-table tr:nth-child(even) td:not(:first-child) {
+    /* Colors */
+    background-color: var(--light-gray);
+}
+
+/* Main Table (Odd Rows) */
+#main-table tr:nth-child(odd):not(:first-child) td:not(:first-child) {
+    /* Colors */
+    background-color: var(--dark-gray);
+}
+
 /* Main Table Cells */
 #main-table td {
     /* Padding */
@@ -199,49 +245,4 @@ input {
 
     /* Margin */
     margin-top: 10px;
-}
-
-/* Utility Class for Providing a Top Left Rounded Corner */
-.top-left-rounded {
-    /* Borders */
-    border-top-left-radius: var(--border-radius);
-}
-
-/* Utility Class for Providing a Top Right Rounded Corner */
-.top-right-rounded {
-    /* Borders */
-    border-top-right-radius: var(--border-radius);
-}
-
-/* Utility Class for Providing a Bottom Left Rounded Corner */
-.bottom-left-rounded {
-    /* Borders */
-    border-bottom-left-radius: var(--border-radius);
-}
-
-/* Utility Class for Providing a Bottom Right Rounded Corner */
-.bottom-right-rounded {
-    /* Borders */
-    border-bottom-right-radius: var(--border-radius);
-}
-
-/* Encapsulates All Labels Within the Main Table */
-.table-label {
-    /* Colors */
-    background-color: var(--cyan);
-}
-
-/* Utility Class for Providing a Light Gray Background */
-.light-gray-background {
-    background-color: var(--light-gray);
-}
-
-/* Utility Class for Providing a Dark Gray Background */
-.dark-gray-background {
-    background-color: var(--dark-gray);
-}
-
-/* Utility Class for Providing a Dark Cyan Background */
-.dark-cyan-background {
-    background-color: var(--dark-cyan);
 }

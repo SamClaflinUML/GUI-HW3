@@ -15,14 +15,6 @@ const argMax = 50;
 
 // CSS Classes
 const invalidInputClass = "invalid-input";
-const topLeftRoundedClass = "top-left-rounded";
-const topRightRoundedClass = "top-right-rounded";
-const bottomLeftRoundedClass = "bottom-left-rounded";
-const bottomRightRoundedClass = "bottom-right-rounded";
-const lightGrayBackgroundClass = "light-gray-background";
-const darkGrayBackgroundClass = "dark-gray-background";
-const darkCyanBackgroundClass = "dark-cyan-background";
-const tableLabelClass = "table-label";
 
 // HTML Elements
 const form = document.getElementById("main-form");
@@ -156,48 +148,27 @@ const removeErrorIndicators = () => {
 
 const generateTable = (multiplierRange, multiplicandRange) => {
     // Initialization
-    let newHtml = `<tr><td class="${topLeftRoundedClass} ${darkCyanBackgroundClass}"></td>`;
+    let newHtml = `<tr><td></td>`;
 
     // Generate the header row
     multiplierRange.arr.forEach((multiplier, idx) => {
-        // Initialization
-        let currMultiplier = "<td ";
-
-        // Add rounded corner if applicable
-        let additionalClass = `${tableLabelClass} `;
-        if (idx === multiplierRange.length - 1) {
-            additionalClass += `${topRightRoundedClass} `;
-        }         
-
         // Add the current cell to the table
-        currMultiplier += `class="${additionalClass}">${multiplier}</td>`
+        let currMultiplier = `<td>${multiplier}</td>`;
         newHtml += currMultiplier;
     });
 
     // Iterate over all multiplicands 
-    multiplicandRange.arr.forEach((multiplicand, multiplicandIdx) => {
+    multiplicandRange.arr.forEach(multiplicand => {
         // Initialize the current row
         let currRow = "<tr>";
 
         // Append each multiplicand to the leftmost column
-        let additionalClass = `${tableLabelClass} `;
-        additionalClass += multiplicandIdx === multiplicandRange.length - 1 
-            ? bottomLeftRoundedClass
-            : "";
-        currRow += `<td class="${additionalClass}">${multiplicand}</td>`;
+        currRow += `<td>${multiplicand}</td>`;
 
         // Iterate over all multiplicands
-        multiplierRange.arr.forEach((multiplier, multiplierIdx) => {
-            // Determine the current element's classes 
-            additionalClass = multiplicandIdx % 2 === 0
-                ? `${lightGrayBackgroundClass} `
-                : `${darkGrayBackgroundClass} `;
-            additionalClass += multiplicandIdx === multiplicandRange.length - 1 && multiplierIdx === multiplierRange.length - 1
-                ? `${bottomRightRoundedClass} `
-                : "";
-
+        multiplierRange.arr.forEach(multiplier => {
             // Perform the multiplication and append the result to the current row 
-            currRow += `<td class="${additionalClass}">${multiplier * multiplicand}</td>`;
+            currRow += `<td>${multiplier * multiplicand}</td>`;
         });
 
         // Add the current row to the new HTML 
