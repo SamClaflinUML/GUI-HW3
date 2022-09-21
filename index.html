@@ -1,0 +1,55 @@
+<!-- File: index.html -->
+<!-- Name: Samuel Claflin -->
+<!-- Email: samuel_claflin@student.uml.edu -->
+<!-- Date: 9/21/2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Sam Claflin HW3</title>
+</head>
+<body>
+    <!-- Main Header Container -->
+    <div id="main-header-container">
+        <!-- Main Header -->
+        <h1 id="main-header">
+            Multiplication Table Generator
+        </h1>
+    </div>
+
+    <!-- Main Form -->
+    <form id="main-form">
+        <!-- Multiplier Minimum -->
+        <label for="multiplier-minimum">Multiplier Minimum:</label>
+        <input id="multiplier-minimum" name="multiplier-minimum" type="value">
+        
+        <!-- Multiplier Maximum -->
+        <label for="multiplier-maximum">Multiplier Maximum:</label>
+        <input id="multiplier-maximum" name="multiplier-maximum" type="value">
+
+        <!-- Multiplicand Minimum -->
+        <label for="multiplicand-minimum">Multiplicand Minimum:</label>
+        <input id="multiplicand-minimum" name="multiplicand-minimum" type="value">
+
+        <!-- Multiplicand Maximum -->
+        <label for="multiplicand-maximum">Multiplicand Maximum:</label>
+        <input id="multiplicand-maximum" name="multiplicand-maximum" type="value">
+
+        <!-- Error Box -->
+        <div id="error-box"></div>
+
+        <!-- Submit Button -->
+        <button id="submit-button" type="submit">Submit</button>
+    </form>
+
+    <!-- Main Table -->
+    <table id="main-table"></table>    
+
+    <!-- JS -->
+    <script src="index.js"></script>
+</body>
+</html>
