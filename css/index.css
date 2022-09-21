@@ -197,6 +197,23 @@
     cursor: pointer;
 }
 
+/* Encapsulates Inputs with Invalid Values */
+.invalid-input {
+    border: 1px solid red;
+}
+
+/* Error Box */
+#error-box {
+    width: 175px;
+
+    /* Font Configuration */
+    color: red;
+    word-wrap: break-word;
+
+    /* Margin */
+    margin-top: 10px;
+}
+
 /* All Headers */
 h1 {
     /* Font Configuration */
@@ -228,21 +245,4 @@ input {
 
     /* Padding */
     padding: 5px;
-}
-
-/* Encapsulates Inputs with Invalid Values */
-.invalid-input {
-    border: 1px solid red;
-}
-
-/* Error Box */
-#error-box {
-    width: 175px;
-
-    /* Font Configuration */
-    color: red;
-    word-wrap: break-word;
-
-    /* Margin */
-    margin-top: 10px;
 }
