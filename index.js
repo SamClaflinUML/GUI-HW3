@@ -15,11 +15,13 @@ const argMax = 50;
 
 // CSS Classes
 const invalidInputClass = "invalid-input";
+const boxShadowClass = "box-shadow";
 
 // HTML Elements
-const form = document.getElementById("main-form");
-const table = document.getElementById("main-table");
+const mainForm = document.getElementById("main-form");
+const mainTable = document.getElementById("main-table");
 const errorBox = document.getElementById("error-box");
+const mainTableContainer = document.getElementById("main-table-container");
 const multiplierMinimumInput = document.getElementById("multiplier-minimum");
 const multiplierMaximumInput = document.getElementById("multiplier-maximum");
 const multiplicandMinimumInput = document.getElementById("multiplicand-minimum");
@@ -46,7 +48,7 @@ class Range {
 // Entry point
 const main = () => {
     // Add event listeners
-    form.addEventListener("submit", handleSubmitButtonClicked);
+    mainForm.addEventListener("submit", handleSubmitButtonClicked);
 };
 
 // Submit button on-click event handler
@@ -177,7 +179,10 @@ const generateTable = (multiplierRange, multiplicandRange) => {
     });
 
     // Render the new HTML 
-    table.innerHTML = newHtml;
+    mainTable.innerHTML = newHtml;
+
+    // Add a box shadow
+    mainTableContainer.classList.add(boxShadowClass);
 };
 
 /**

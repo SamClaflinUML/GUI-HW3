@@ -13,41 +13,44 @@
     <title>Sam Claflin HW3</title>
 </head>
 <body>
-    <!-- Main Header Container -->
-    <div id="main-header-container">
-        <!-- Main Header -->
-        <h1 id="main-header">
-            Multiplication Table Generator
-        </h1>
+    <!-- Main Header -->
+    <h1 id="main-header">
+        Multiplication Table Generator
+    </h1>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper">
+        <!-- Main Form -->
+        <form id="main-form">
+            <!-- Multiplier Minimum -->
+            <label for="multiplier-minimum">Multiplier Minimum:</label>
+            <input id="multiplier-minimum" name="multiplier-minimum" type="value">
+            
+            <!-- Multiplier Maximum -->
+            <label for="multiplier-maximum">Multiplier Maximum:</label>
+            <input id="multiplier-maximum" name="multiplier-maximum" type="value">
+
+            <!-- Multiplicand Minimum -->
+            <label for="multiplicand-minimum">Multiplicand Minimum:</label>
+            <input id="multiplicand-minimum" name="multiplicand-minimum" type="value">
+
+            <!-- Multiplicand Maximum -->
+            <label for="multiplicand-maximum">Multiplicand Maximum:</label>
+            <input id="multiplicand-maximum" name="multiplicand-maximum" type="value">
+
+            <!-- Error Box -->
+            <div id="error-box"></div>
+
+            <!-- Submit Button -->
+            <button id="submit-button" type="submit">Submit</button>
+        </form>
+
+        <!-- Main Table Container -->
+        <div id="main-table-container">
+            <!-- Main Table -->
+            <table id="main-table"></table>    
+        </div>
     </div>
-
-    <!-- Main Form -->
-    <form id="main-form">
-        <!-- Multiplier Minimum -->
-        <label for="multiplier-minimum">Multiplier Minimum:</label>
-        <input id="multiplier-minimum" name="multiplier-minimum" type="value">
-        
-        <!-- Multiplier Maximum -->
-        <label for="multiplier-maximum">Multiplier Maximum:</label>
-        <input id="multiplier-maximum" name="multiplier-maximum" type="value">
-
-        <!-- Multiplicand Minimum -->
-        <label for="multiplicand-minimum">Multiplicand Minimum:</label>
-        <input id="multiplicand-minimum" name="multiplicand-minimum" type="value">
-
-        <!-- Multiplicand Maximum -->
-        <label for="multiplicand-maximum">Multiplicand Maximum:</label>
-        <input id="multiplicand-maximum" name="multiplicand-maximum" type="value">
-
-        <!-- Error Box -->
-        <div id="error-box"></div>
-
-        <!-- Submit Button -->
-        <button id="submit-button" type="submit">Submit</button>
-    </form>
-
-    <!-- Main Table -->
-    <table id="main-table"></table>    
 
     <!-- JS -->
     <script src="index.js"></script>

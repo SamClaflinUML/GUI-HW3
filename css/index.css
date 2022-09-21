@@ -40,24 +40,10 @@
     --dark-cyan: rgb(23, 159, 137);
 }
 
-/* Main Header Container */
-#main-header-container {
-    /* Sizing */
-    width: 100%;
-
-    /* Flex Box Configuration */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* Margin */
-    margin-top: 15px;
-}
-
 /* Main Header */
 #main-header {
     /* Sizing */
-    width: 650px;
+    width: 100vw;
 
     /* Colors */
     background-color: var(--cyan);
@@ -75,16 +61,22 @@
 
     /* Positioning */
     position: relative;
+}
 
-    /* Borders */
-    border-radius: 200px;
+/* Content Wrapper */
+#content-wrapper {
+    /* Flex Box Configuration */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* Margin */
+    margin-top: var(--content-padding);
 }
 
 /* Main Form */
 #main-form {
-    /* Sizing */
-    width: 300px;
-
     /* Grid Configuration */
     display: grid;
     align-items: center;
@@ -95,8 +87,7 @@
     /* Borders */
     border-radius: var(--border-radius);
 
-    /* Margin & Padding */
-    margin: var(--content-padding);
+    /* Padding */
     padding: var(--content-padding);
 
     /* Shadows */
@@ -112,16 +103,33 @@
     text-align: right;
 }
 
-/* Main Table */
-#main-table {
+/* Main Table Container */
+#main-table-container {
+    /* Sizing */
+    width: 60%;
+    height: 500px;
+
+    /* Overflow */
+    overflow: auto;
+
     /* Borders */
     border-radius: var(--border-radius);
 
     /* Margin */
-    margin: var(--content-padding);
+    margin-top: var(--content-padding);
 
-    /* Shadows */
-    box-shadow: var(--box-shadow);
+    /* Animation Configuration */
+    transition-duration: 0;
+}
+
+/* Main Table */
+#main-table {
+    /* Sizing */
+    width: 100%;
+    height: 100%;
+
+    /* Borders */
+    border-radius: var(--border-radius);
 }
 
 /* Main Table (Top Left Corner) */
@@ -245,4 +253,9 @@ input {
 
     /* Padding */
     padding: 5px;
+}
+
+/* Utility Class for Providing a Box Shadow */
+.box-shadow {
+    box-shadow: var(--box-shadow);
 }
